@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <form method="GET">
+    <select name="region">
+        <option value="">All Regions</option>
+        {% for r in regions %}
+        <option value="{{ r }}" {% if r == selected_region %}selected{% endif %}>
+            {{ r }}
+        </option>
+        {% endfor %}
+    </select>
+
+    <button type="submit">Filter</button>
+</form>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="navbar">
+    <a href="/">Dashboard</a>
+    <a href="/predict">Prediction</a>
+</div>
+
+<h1>COVID-19 Dashboard</h1>
+
+<div class="card">
+    <p>Total Cases: {{ total_cases }}</p>
+    <p>Average Recovery: {{ avg_recovery }}</p>
+    <p>Most Affected Region: {{ most_affected_region }}</p>
+    <p>Average Age: {{ avg_age }}</p>
+</div>
+
+<div class="images">
+    <img src="/static/gender.png">
+    <img src="/static/age.png">
+    <img src="/static/region.png">
+    <img src="/static/recovery.png">
+</div>
+
+</body>
+</html>

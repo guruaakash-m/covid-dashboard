@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="navbar">
+    <a href="/">Dashboard</a>
+    <a href="/predict">Prediction</a>
+</div>
+
+<h1>Recovery Prediction</h1>
+
+<form method="POST">
+    <input type="number" name="age" placeholder="Enter Age" required>
+    <input type="number" name="contacts" placeholder="Contact Number" required>
+    <button type="submit">Predict</button>
+</form>
+
+{% if prediction %}
+<h2>Predicted Recovery Days: {{ prediction }}</h2>
+{% endif %}
+
+</body>
+</html>

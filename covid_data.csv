@@ -1,0 +1,5 @@
+sex,birth_year,region,contact_number,confirmed_date,released_date
+male,1985,Chennai,10,2020-01-01,2020-01-10
+female,1990,Delhi,5,2020-01-03,2020-01-12
+male,1975,Mumbai,8,2020-01-05,2020-01-15
+female,2000,Bangalore,3,2020-01-07,2020-01-14
