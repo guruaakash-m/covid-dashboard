@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import os
 from sklearn.linear_model import LinearRegression
+import matplotlib
+matplotlib.use('Agg')
 
 app = Flask(__name__)
 
@@ -46,7 +48,10 @@ def generate_graphs():
     plt.savefig("static/recovery.png")
     plt.close()
 
-generate_graphs()
+try:
+    generate_graphs()
+except Exception as e:
+    print("Graph error:", e)
 
 # Dashboard Route
 @app.route('/')
